@@ -6,7 +6,7 @@ import UseCases from '../components/UseCases'
 import Team from '../components/Team'
 import Partners from '../components/Partners'
 import CTA from '../components/CTA'
-
+//import AboutSection from './AboutUs'
 export default function Home() {
   return (
     <main className="flex flex-col">
@@ -15,7 +15,7 @@ export default function Home() {
       <Solutions />
       <Platform />
       <UseCases />
-      <Team />
+      
       <Partners />
       <CTA />
     </main>

@@ -5,6 +5,7 @@ import Navigation from './components/Navigation'
 import Home from './pages/Home'
 import ContactPage from './pages/Contact'
 import Footer from './components/Footer'
+import AboutPage from './pages/AboutUs'
 
 export default function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/aboutus" element={<AboutPage/>}/>
         </Routes>
         <Footer />
       </div>
