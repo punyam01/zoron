@@ -3,10 +3,9 @@ import ProblemStatement from '../components/ProblemStatement'
 import Solutions from '../components/Solutions'
 import Platform from '../components/Platform'
 import UseCases from '../components/UseCases'
-import Team from '../components/Team'
 import Partners from '../components/Partners'
 import CTA from '../components/CTA'
-//import AboutSection from './AboutUs'
+
 export default function Home() {
   return (
     <main className="flex flex-col">
