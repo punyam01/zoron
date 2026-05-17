@@ -14,7 +14,6 @@ export default function Home() {
       <Solutions />
       <Platform />
       <UseCases />
-      
       <Partners />
       <CTA />
     </main>
