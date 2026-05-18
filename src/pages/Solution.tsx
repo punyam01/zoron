@@ -1,8 +1,16 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowLeft, CheckCircle2, ArrowUpRight, Building2, Briefcase, BarChart4 } from 'lucide-react'
+import Partners from "../components/Partners";
+function YourNextComponent() {
+  return (
+    <div className="py-16 border-t border-white/5 flex flex-col items-center justify-center text-center">
+      <span className="text-[9px] font-mono tracking-[0.3em] text-white/30 uppercase mb-2">// NEXT_MODULE_INLINE</span>
+      <h3 className="text-sm font-medium text-white">Your New Section Design Mounts Safely Here</h3>
+    </div>
+  )
+}
 
-// Dynamic Content Ledger matching the precise data requirements
 const solutionsRegistry = {
   "corporate-finance": {
     id: "corporate-finance",
@@ -173,7 +181,9 @@ export default function SolutionPage() {
             Initiate Call <ArrowUpRight size={12} />
           </a>
         </div>
-
+<div className="mt-20 pt-12 border-t border-white/10">
+          <Partners />
+        </div>
       </div>
     </main>
   )

@@ -3,7 +3,7 @@ import ProblemStatement from '../components/ProblemStatement'
 import Solutions from '../components/Solutions'
 import Platform from '../components/Platform'
 import UseCases from '../components/UseCases'
-import Partners from '../components/Partners'
+
 import CTA from '../components/CTA'
 import WhyZoron from '../components/WhyZoron'
 
@@ -16,7 +16,6 @@ export default function Home() {
       <Platform />
       <UseCases />
       <WhyZoron/>
-      <Partners />
       <CTA />
     </main>
   )

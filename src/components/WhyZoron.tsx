@@ -79,7 +79,7 @@ export default function WhyZoron() {
           })}
         </div>
 
-        {/* Full-Width Visual Metric Highlight Band */}
+        {/* Full-Width Visual Metric Highlight Band
         <div className="border-t border-b border-white/10 bg-white/[0.005] backdrop-blur-sm">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 sm:divide-x divide-white/10 text-center lg:text-left">
             {metrics.map((metric, mIdx) => (
@@ -96,7 +96,7 @@ export default function WhyZoron() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>

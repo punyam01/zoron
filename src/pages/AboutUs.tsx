@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Linkedin, Target, Shield, Eye, Users2, Sparkles } from 'lucide-react'
+import { Linkedin, Target, Shield, Eye, Users2, Sparkles, ArrowUpRight } from 'lucide-react'
 
 const values = [
   {
@@ -24,33 +24,9 @@ const values = [
   }
 ]
 
-const team = [
-  {
-    name: "Alexander Vance",
-    title: "Co-Founder & CEO",
-    bio: "Former M&A Director at Goldman Sachs with over 15 years of transaction experience across technology and industrial sectors. Pioneered internal data-automation initiatives for cross-border private equity deals.",
-    linkedin: "https://linkedin.com",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600&h=800" // Premium, editorial professional headshot placeholder
-  },
-  {
-    name: "Dr. Elena Rostova",
-    title: "Co-Founder & Chief Scientist",
-    bio: "Spent a decade building machine learning frameworks for high-frequency trading networks at quantitative funds. Holds a PhD in Computer Science with a specialization in Multi-Agent Reasoning Systems.",
-    linkedin: "https://linkedin.com",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600&h=800"
-  },
-  {
-    name: "Marcus Sterling",
-    title: "Head of Financial Architecture",
-    bio: "Ex-CFO and Big 4 Audit Partner. Ensured financial models and automated reporting protocols map directly into strict international financial compliance standards including IFRS and GAAP.",
-    linkedin: "https://linkedin.com",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600&h=800"
-  }
-]
-
 export default function AboutPage() {
   return (
-    <section id="team" className="relative py-24 md:py-32 bg-[#050505] text-white border-t border-white/10 overflow-hidden">
+    <section id="about" className="relative py-24 md:py-32 bg-[#050505] text-white border-t border-white/10 overflow-hidden">
       {/* Structural Line Grid */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
            style={{ backgroundImage: `linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
@@ -112,7 +88,7 @@ export default function AboutPage() {
         </div>
 
         {/* Corporate Values Matrix Grid */}
-        <div className="mb-32">
+        <div className="mb-24">
           <div className="flex items-center gap-2 mb-12">
             <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-white/50">Core Values</h3>
           </div>
@@ -140,62 +116,47 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Leadership Team Section */}
-        <div>
-          <div className="flex items-center gap-2 mb-12">
-            <h3 className="text-xs font-mono uppercase tracking-[0.2em] text-white/50">Leadership Team</h3>
-          </div>
+        {/* ========================================================================= */}
+        {/* NEW NARRATIVE CTA: WANNA WORK WITH US?                                    */}
+        {/* ========================================================================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="relative border border-white/10 bg-gradient-to-r from-white/[0.01] to-transparent p-8 md:p-12 hover:border-white/20 transition-colors group overflow-hidden"
+        >
+          {/* Subtle abstract background flare */}
+          <div className="absolute right-0 bottom-0 w-80 h-80 rounded-full bg-white/[0.01] blur-[80px] pointer-events-none group-hover:bg-white/[0.02] transition-colors" />
 
-          {/* Sharp, Editorial Team Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="group border border-white/10 bg-white/[0.01] overflow-hidden hover:border-white/20 transition-colors flex flex-col"
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div className="lg:col-span-8">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse" />
+                <span className="text-[10px] font-mono tracking-[0.25em] text-white/40 uppercase">Careers & Ecosystem</span>
+              </div>
+              
+              <h3 className="text-2xl md:text-3xl font-light tracking-tight text-white mb-3">
+                Want to build the future of agentic finance?
+              </h3>
+              <p className="text-xs md:text-sm text-gray-400 font-light leading-relaxed max-w-2xl">
+                We are actively looking for quantitative engineers, finance specialists, and systems designers who want to rewrite workflows for enterprise investments and M&A infrastructure.
+              </p>
+            </div>
+
+            <div className="lg:col-span-4 lg:flex lg:justify-end">
+              <a 
+                href="/contact" 
+                className="inline-flex items-center gap-3 bg-white text-black px-6 py-3 font-mono text-xs uppercase tracking-wider font-semibold hover:bg-gray-200 active:scale-[0.99] transition-all w-full sm:w-auto justify-between sm:justify-start group/btn"
               >
-                {/* 3:4 Aspect Ratio Headshot Container */}
-                <div className="aspect-[3/4] overflow-hidden bg-zinc-900 border-b border-white/10 relative">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-700" 
-                  />
-                  {/* Subtle vignette layer overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
-                </div>
+                <span>Connect With Us</span>
+                <ArrowUpRight size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+              </a>
+            </div>
 
-                {/* Identity Content */}
-                <div className="p-6 flex-grow flex flex-col justify-between">
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-lg font-medium tracking-tight text-white">
-                        {member.name}
-                      </h4>
-                      <a 
-                        href={member.linkedin} 
-                        target="_blank" 
-                        rel="noreferrer" 
-                        className="text-white/30 hover:text-white transition-colors"
-                      >
-                        <Linkedin size={14} />
-                      </a>
-                    </div>
-                    <p className="text-xs tracking-wider text-gray-400 uppercase font-mono mb-4">
-                      {member.title}
-                    </p>
-                    <p className="text-xs text-gray-400 leading-relaxed font-light">
-                      {member.bio}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

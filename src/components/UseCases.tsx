@@ -212,14 +212,7 @@ export default function UseCasesHome() {
                 </div>
                 
                 {/* Metric Output Highlight */}
-                <div className="flex justify-between items-end pt-4 border-t border-white/5">
-                  <span className="text-xl font-mono font-light tracking-tight text-[#00d9ff]">
-                    {uc.metric}
-                  </span>
-                  <span className="text-[10px] font-mono text-white/20 group-hover:text-white/60 transition-colors">
-                    INDEX // 0{idx + 1}
-                  </span>
-                </div>
+               
               </div>
             )
           })}

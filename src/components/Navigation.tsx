@@ -18,6 +18,7 @@ export default function Navigation() {
   }, [])
 
   const navItems = [
+    { label: 'Home', href: '/' },
     { label: 'Platform', href: '/platform' },
     { label: 'Solutions', href: '/solutions' },
    { label: 'Use Cases', href: '/usecases' },
