@@ -67,14 +67,8 @@ export default function SolutionPage() {
 
       <div className="max-w-5xl mx-auto px-6 relative z-10">
         
-        {/* Back Link Router */}
-        <a 
-          href="/" 
-          className="inline-flex items-center gap-2 text-xs font-mono text-gray-500 hover:text-white uppercase tracking-wider mb-12 transition-colors group"
-        >
-          <ArrowLeft size={12} className="transform group-hover:-translate-x-0.5 transition-transform" /> 
-          Back to Platform
-        </a>
+        
+        
 
         {/* Premium Dark Navigation Tabs Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 mb-16">

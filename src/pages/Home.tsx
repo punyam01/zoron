@@ -5,6 +5,7 @@ import Platform from '../components/Platform'
 import UseCases from '../components/UseCases'
 import Partners from '../components/Partners'
 import CTA from '../components/CTA'
+import WhyZoron from '../components/WhyZoron'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Solutions />
       <Platform />
       <UseCases />
+      <WhyZoron/>
       <Partners />
       <CTA />
     </main>

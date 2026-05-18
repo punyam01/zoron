@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +19,7 @@ export default function Navigation() {
   const navItems = [
     { label: 'Platform', href: '/platform' },
     { label: 'Solutions', href: '/solution' },
-   { label: 'Use Cases', href: '/#use-cases' },
+   { label: 'Use Cases', href: '/usecases' },
     { label: 'Contact', href: '/contact' },
     { label: 'About Us', href: '/aboutus' },
    
@@ -36,6 +37,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2 cursor-pointer group">
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
@@ -45,20 +47,24 @@ export default function Navigation() {
             </div>
             <span className="text-xl font-bold text-foreground">ZORON.AI</span>
           </motion.div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <motion.a
-                key={item.label}
-                href={item.href}
-                whileHover={{ color: '#00d9ff' }}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              >
-                {item.label}
-              </motion.a>
-            ))}
-          </div>
+         <div className="hidden md:flex items-center space-x-8">
+  {navItems.map((item) => {
+    const MotionLink = motion.create(Link); // Generates a motion-compatible Link
+    return (
+      <MotionLink
+        key={item.label}
+        to={item.href}
+        whileHover={{ color: '#00d9ff' }}
+        className="text-sm font-medium text-muted-foreground transition-colors"
+      >
+        {item.label}
+      </MotionLink>
+    );
+  })}
+</div>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
@@ -85,13 +91,13 @@ export default function Navigation() {
         >
           <div className="py-4 space-y-2 border-t border-border">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary rounded-lg hover:bg-secondary transition-colors"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <div className="pt-4 space-y-2 border-t border-border">
               <button className="btn-secondary w-full text-sm">Login</button>

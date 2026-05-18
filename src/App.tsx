@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import AboutPage from './pages/AboutUs'
 import SolutionPage from './pages/Solution'
 import PlatformPage from './pages/Platform'
+import UseCasesPage from './pages/useCases'
 export default function App() {
   useEffect(() => {
     const lenis = new (Lenis as any)()
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/aboutus" element={<AboutPage/>}/>
           <Route path="/solution" element={<SolutionPage/>}/>
           <Route path="/platform" element={<PlatformPage/>}/>
+          <Route path="/usecases" element={<UseCasesPage/>}/>
         </Routes>
         <Footer />
       </div>
