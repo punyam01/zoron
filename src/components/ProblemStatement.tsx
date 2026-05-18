@@ -142,7 +142,7 @@ export default function ProblemStatement() {
 
               <div className="flex justify-start sm:justify-end">
                 <motion.a 
-                href='/solution'
+                href='/solutions'
                   whileHover={{ gap: '8px' }}
                   className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-[0.15em] text-white border-b border-white/20 pb-1 transition-all"
                 >

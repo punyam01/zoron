@@ -169,8 +169,11 @@
 //     </section>
 //   )
 // }
+
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Building2, Briefcase, BarChart4 } from 'lucide-react'
+import { Link } from 'react-router-dom';
+const MotionLink = motion.create(Link);
 
 const domains = [
   {
@@ -179,7 +182,7 @@ const domains = [
     title: "Corporate Finance",
     subtitle: "Intelligent automation for financial planning, analysis, and reporting.",
     description: "Zoron's AI agents handle variance analysis, forecasting, board pack preparation, and management reporting — freeing your finance team to focus on strategic decision support.",
-    href: "/solutions/corporate-finance"
+    href: "/solutions"
   },
   {
     id: "transactions-advisory",
@@ -187,7 +190,7 @@ const domains = [
     title: "Transactions Advisory",
     subtitle: "Accelerate every stage of the M&A lifecycle with AI.",
     description: "From initial screening and financial due diligence to valuation modelling and SPA review, Zoron's agentic AI works alongside your deal team to reduce cycle times and surface risks.",
-    href: "/solutions/transactions-advisory"
+    href: "/solutions"
   },
   {
     id: "private-equity",
@@ -195,7 +198,7 @@ const domains = [
     title: "Private Equity",
     subtitle: "Give your investment team an AI edge from origination to exit.",
     description: "Zoron aggregates portfolio data, automates LP reporting, monitors covenant compliance, and identifies value-creation opportunities across your entire book layout dynamically.",
-    href: "/solutions/private-equity"
+    href: "/solutions"
   }
 ]
 
@@ -278,13 +281,14 @@ export default function Solutions() {
 
                   {/* Dynamic Action Link */}
                   <div className="flex justify-start">
-                    <motion.a 
-                      href={domain.href}
+                    <MotionLink
+                      to={domain.href}
+                     
                       whileHover={{ gap: '10px' }}
                       className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] font-medium text-white/50 hover:text-white border-b border-white/10 hover:border-white pb-1 transition-all group/link"
                     >
                       Explore Full Capabilities <ArrowUpRight size={12} className="text-white/40 group-hover/link:text-white transition-colors" />
-                    </motion.a>
+                    </MotionLink>
                   </div>
                 </motion.div>
               )

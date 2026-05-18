@@ -18,7 +18,7 @@ export default function Navigation() {
 
   const navItems = [
     { label: 'Platform', href: '/platform' },
-    { label: 'Solutions', href: '/solution' },
+    { label: 'Solutions', href: '/solutions' },
    { label: 'Use Cases', href: '/usecases' },
     { label: 'Contact', href: '/contact' },
     { label: 'About Us', href: '/aboutus' },
