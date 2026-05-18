@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link , useLocation} from 'react-router-dom'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,14 +53,21 @@ export default function Navigation() {
           {/* Desktop Navigation */}
          <div className="hidden md:flex items-center space-x-8">
   {navItems.map((item) => {
-    const MotionLink = motion.create(Link); // Generates a motion-compatible Link
+    const MotionLink = motion.create(Link); 
+    const isActive = location.pathname === item.href;
     return (
       <MotionLink
         key={item.label}
         to={item.href}
         whileHover={{ color: '#00d9ff' }}
-        className="text-sm font-medium text-muted-foreground transition-colors"
+        animate={{ color: isActive ? '#00d9ff' : 'rgba(156, 163, 175, 1)' }}
+        // 3. UPDATED THIS LINE: Added conditional template styling for the text color
+        className={`text-sm font-medium transition-colors ${
+          isActive ? 'text-[#00d9ff]' : 'text-muted-foreground'
+        }`}
       >
+        
+      
         {item.label}
       </MotionLink>
     );
