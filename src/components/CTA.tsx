@@ -58,7 +58,7 @@ export default function BottomCTA() {
           >
             {/* Primary Solid Execution Action */}
             <motion.a
-              href="/demo"
+              href="/contact"
               whileHover={{ bg: '#ffffff', color: '#000000' }}
               className="w-full sm:w-auto border border-white text-white bg-transparent px-6 py-2.5 uppercase tracking-widest transition-colors flex items-center justify-center gap-2 font-medium"
             >
